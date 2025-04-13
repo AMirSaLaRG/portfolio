@@ -17,3 +17,6 @@ def contact(request):
 
 def about(request):
     return render(request, 'protfolio/about.html')
+
+def blog(request):
+    return render(request, 'protfolio/blog.html')

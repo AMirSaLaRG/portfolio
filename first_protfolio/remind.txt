@@ -11,3 +11,6 @@ about me ham ok shodesh templatesh faqat moshkelat balaro dare
 !!?avaz ke mishe khate zir taghir nemikone peygiri
 __ ino kolan hazf kardam ke khate mimoone
 !! badan bayad barash ye animetion bezaram ke masalan bege too home ba pass dadan too loaded page name
+sakhatan db haye morede nazar
+table haye course, courseskill, education, education skill gained, project, projectskill, skill, testimonial ezafe shod
+admin courses education projects skill testimonials ezafe shod

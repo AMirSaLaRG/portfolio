@@ -18,6 +18,8 @@ class SkillAdmin(admin.ModelAdmin):
         return mark_safe(f'<i class="{obj.icon}"></i>') if obj.icon else "-"
     icon_preview.short_description = "Icon"
 
+    
+
 # ======================
 # PROJECT ADMIN (with skills)
 # ======================

@@ -12,14 +12,15 @@ class Skill(models.Model):
         validators=[MinValueValidator(0), MaxValueValidator(100)]
     )
     category = models.CharField(max_length=20, choices=[
-        ('backend', 'Backend'),
-        ('frontend', 'Frontend'), 
+        ('webdev', 'WebDev'),
+        ('ai', 'AI'), 
         ('devops', 'DevOps'),
         ('design', 'Design'),
-        ('language', 'Language')
+        ('language', 'Language'),
+        ('all', "All"),
     ])
     icon = models.CharField(
-        max_length=30, 
+        max_length=50, 
         blank=True,
         help_text="Font Awesome icon class (e.g. fa-python)"
     )
@@ -35,6 +36,9 @@ class Skill(models.Model):
 
     class Meta:
         ordering = ['-proficiency', 'name']
+        
+    def __str__(self):
+        return self.name
 
 class Project(models.Model):
     title = models.CharField(max_length=200)

@@ -15,10 +15,19 @@ sakhatan db haye morede nazar
 ????table haye course, courseskill, education, education skill gained, project, projectskill, skill, testimonial ezafe shod
 ????admin courses education projects skill testimonials ezafe shod
 
-todo add test to db
-todo sink html rendering
-todo set social media
+__todo add test to db
+_todo sink html rendering
+_odo set social media
 
 !!! fontawsome toye admin load nemshe 
 done some test entery to my database
 added skills to index va bar gozashtam barash
+
+projecta sink shod be index skillasham hamintor ba foregn key 
+eslahi bishtari roo html css shod
+be modelam ye function add kardam ke betoonam esme axaye add shodaro daram ***
+
+
+todo create html for more detail of project it can be like posts
+todo sink html rendering
+odo set social media

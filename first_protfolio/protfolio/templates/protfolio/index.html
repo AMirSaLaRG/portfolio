@@ -53,6 +53,7 @@
 			<div class="fh5co-narrow-content">
 				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Skills</h2>
 				<div class="row">
+					{% comment %} skills show {% endcomment %}
 				{% for skill in skills %}
 				
 					<div class="col-md-6" style="margin-bottom: 100px;">										
@@ -79,74 +80,64 @@
 			</div>
 			{% comment %} this should be projects {% endcomment %}
 			<div class="fh5co-narrow-content">
-				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Recent Blog</h2>
+				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Projects</h2>
 				<div class="row row-bottom-padded-md">
 					{% comment %} a card {% endcomment %}
+					{% for project in projects%}
 					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
 						<div class="blog-entry">
-							<a href="#" class="blog-img"><img src="{% static 'protfolio/images/img-1.jpg ' %}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							{% if project.image %}
+							{% comment %} src="/static/protfolio/images/projects/mushroom.webp" {% endcomment %}
+							<img src="{% static 'protfolio/images/projects/' %}{{ project.image_basename }}" class="blog-img" alt="{{ project.title }}">
+							{% else %}
+							<img src="{% static 'protfolio/images/img-1.jpg' %}" class="blog-img" alt="No image">
+							{% endif %}
 							<div class="desc">
-								<h3><a href="#">Inspirational Website</a></h3>
-								<span><small>by Admin </small> / <small> Web Design </small> / <small> <i class="icon-comment"></i> 14</small></span>
-								<p>Design must be functional and functionality must be translated into visual aesthetics</p>
-								<a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>
+								<h3><a href="#">{{project.title}}</a></h3>
+								<span>{%for skill in project.skills_used.all%} 
+								<i class="{{skill.icon}}"></i><small>{{skill.name}}</small> /   </small>
+								{%endfor%}</span>
+								<p>{{project.description}}</p>
+								{%if project.github_url%}
+								<a href="{{project.github_url}}" class="lead"><i class="fa-brands fa-github"></i>   Git Page</a>
+								{%endif%}
+								</br>
+								{%if project.live_url%}
+								<a href="{{project.live_url}}" class="lead"><i class="fa-solid fa-globe"></i>   Online Page</a>
+								{%endif%}
+								</br><a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>
 							</div>
 						</div>
 					</div>
+					{%endfor%}
 					{% comment %} a card {% endcomment %}
+				</div>
+			</div>
+
+{% comment %} 			
+			<div class="fh5co-narrow-content">
+				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Recent Blog</h2>
+				<div class="row row-bottom-padded-md">
+					
+					{% for project in projects%}
 					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
 						<div class="blog-entry">
 							<a href="#" class="blog-img"><img src="{% static 'protfolio/images/img-1.jpg ' %}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
 							<div class="desc">
-								<h3><a href="#">Inspirational Website</a></h3>
+								<h3><a href="#">{{project.title}}</a></h3>
 								<span><small>by Admin </small> / <small> Web Design </small> / <small> <i class="icon-comment"></i> 14</small></span>
 								<p>Design must be functional and functionality must be translated into visual aesthetics</p>
 								<a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>
 							</div>
 						</div>
 					</div>
+					{%endfor%}
 					
-					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
-						<div class="blog-entry">
-							<a href="#" class="blog-img"><img src="{% static 'protfolio/images/img-2.jpg ' %}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
-							<div class="desc">
-								<h3><a href="#">Inspirational Website</a></h3>
-								<span><small>by Admin </small> / <small> Web Design </small> / <small> <i class="icon-comment"></i> 14</small></span>
-								<p>Design must be functional and functionality must be translated into visual aesthetics</p>
-								<a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
-						<div class="blog-entry">
-							<a href="#" class="blog-img"><img src="{% static 'protfolio/images/img-3.jpg ' %}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
-							<div class="desc">
-								<h3><a href="#">Inspirational Website</a></h3>
-								<span><small>by Admin </small> / <small> Web Design </small> / <small> <i class="icon-comment"></i> 14</small></span>
-								<p>Design must be functional and functionality must be translated into visual aesthetics</p>
-								<a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
-						<div class="blog-entry">
-							<a href="#" class="blog-img"><img src="{% static 'protfolio/images/img-4.jpg ' %}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
-							<div class="desc">
-								<h3><a href="#">Inspirational Website</a></h3>
-								<span><small>by Admin </small> / <small> Web Design </small> / <small> <i class="icon-comment"></i> 14</small></span>
-								<p>Design must be functional and functionality must be translated into visual aesthetics</p>
-								<a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>
-							</div>
-						</div>
-					</div>
-
-
-
-
 				</div>
+			</div>	
+ {% endcomment %}
 
 
-			</div>
 
 			<div id="get-in-touch">
 				<div class="fh5co-narrow-content">

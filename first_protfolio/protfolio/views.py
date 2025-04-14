@@ -1,12 +1,13 @@
 from django.shortcuts import render, HttpResponse
-from .models import Project, Skill, Course
+from .models import Project, Skill, Course, ProjectSkill
 # Create your views here.
 
 def index(request):
     context = {
-        'projects': Project.objects.filter(featured=True),
+        'projects': Project.objects.filter(featured=True)[:7],
         'skills': Skill.objects.filter(showcase=True),
         'courses': Course.objects.all().order_by('-completion_date')[:5],
+        'projectskills': ProjectSkill.objects.all().order_by('-project_id')
     }
     return render(request, 'protfolio/index.html', context)
 

@@ -45,9 +45,15 @@ class Project(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     description = models.TextField()
     detailed_description = models.TextField(blank=True)
-    image = models.ImageField(upload_to='projects/')
+    image = ProcessedImageField(
+        upload_to='protfolio/static/protfolio/images/projects',
+        processors=[ResizeToFill(500, 400)],
+        format='JPEG',
+        options={'quality': 100},
+        blank=True
+    )
     thumbnail = ProcessedImageField(
-        upload_to='projects/thumbnails',
+        upload_to='protfolio/static/protfolio/images/projects/thumbnails',
         processors=[ResizeToFill(400, 300)],
         format='JPEG',
         options={'quality': 80},
@@ -65,6 +71,16 @@ class Project(models.Model):
         ('client', 'Client Work'), 
         ('open-source', 'Open Source')
     ])
+    
+    def image_basename(self):
+        if self.image:
+            return str(self.image)[len('protfolio/static/protfolio/images/projects')+1:] 
+        return ""
+    
+    def thumbnail_basename(self):
+        if self.image:
+            return str(self.image)[len('protfolio/static/protfolio/images/projects/thumbnails')+1:] 
+        return ""
 
     class Meta:
         ordering = ['-start_date']

@@ -38,3 +38,10 @@ background taghir dade shod rangesh
 index va contact kamele hodoodan
 todo spam nashe to message
 todo ip visitoramo bebinam
+
+url project detail sakhte shod mitune khoshgeltar bashe
+ba click roo project mirim to detail
+todo mishe be modelam meghdare skill be kar rafte ezafe she
+todo selecter baraye projects gozashe she
+todo github va love ezafe she to detail
+

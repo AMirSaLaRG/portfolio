@@ -12,7 +12,27 @@ def index(request):
     return render(request, 'protfolio/index.html', context)
 
 def projects(request):
-    return render(request, 'protfolio/projects.html')
+    context = {
+        'projects': Project.objects.all(),
+        'skills': Skill.objects.all(),
+        'projectskills': ProjectSkill.objects.all().order_by('-project_id')
+    }
+
+    return render(request, 'protfolio/projects.html', context)
+
+def project_detail(request, project_id):
+    # Fetch the project using the provided project_id
+    try:
+        project = Project.objects.get(pk=project_id)
+    except Project.DoesNotExist:
+        return HttpResponse("Project not found", status=404)
+
+    context = {
+        'project': project,
+        'skills': Skill.objects.all(),
+        'projectskills': ProjectSkill.objects.filter(project=project).order_by('-project_id')
+    }
+    return render(request, 'protfolio/project_detail.html', context)
 
 def contact(request):
     if request.method == 'POST':

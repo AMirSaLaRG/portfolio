@@ -65,7 +65,7 @@
 							<img src="{% static 'protfolio/images/img-1.jpg' %}" class="blog-img" alt="No image">
 							{% endif %}
 							<div class="desc">
-								<h3><a href="#">{{project.title}}</a></h3>
+								<h3><a href="{%url 'projects'%}{{project.id}}">{{project.title}}</a></h3>
 								<span>{%for skill in project.skills_used.all%} 
 								<i class="{{skill.icon}}"></i><small>{{skill.name}}</small> /   </small>
 								{%endfor%}</span>

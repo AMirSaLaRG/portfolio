@@ -1,0 +1,49 @@
+ {% load static %}
+ {% include 'protfolio/includes/head.html'%}
+
+		{% comment %} <div id="fh5co-main"> {% endcomment %}
+			<div class="fh5co-narrow-content">
+				<div class="row row-bottom-padded-md">
+					<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+						<img class="img-responsive" src="{%static '/protfolio/images/projects/'%}{{project.image_basename}}" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
+					</div>
+					<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+						<h2 class="fh5co-heading">{{project.title}}</h2>
+						<p>{{project.description}}</p>
+						<p>{{project.detailed_description}}</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="fh5co-narrow-content">
+					<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Skills Used</h2>
+					
+					<div class="row">
+						{%for skill in project.skills_used.all%}
+						<div class="col-md-6">
+							<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+								
+								{% comment %} <div class="fh5co-icon">
+									
+								</div> {% endcomment %}
+								<div class="fh5co-text">
+									
+									{% comment %} <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p> {% endcomment %}
+								</div>
+								<i class="{{skill.icon}}"></i>
+									<h3>{{skill.name}}</h3>
+							</div>
+						</div>
+						
+						{% endfor %}
+					</div>
+					
+				</div>
+		
+			
+		</div>
+	</div>
+
+
+{% include 'protfolio/includes/footer.html'%}
+

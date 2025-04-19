@@ -625,7 +625,7 @@ body.offcanvas .fh5co-nav-toggle {
   vertical-align: middle;
   height: 270px;
   background: #fff;
-  opacity: 0;
+  opacity: 0.3;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -639,7 +639,7 @@ body.offcanvas .fh5co-nav-toggle {
 }
 .work .desc span {
   display: block;
-  color: #999999;
+  color: #080606;
   font-size: 12px;
   -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
   transition: transform 0.3s, opacity 0.3s;
@@ -649,12 +649,13 @@ body.offcanvas .fh5co-nav-toggle {
 @media screen and (max-width: 768px) {
   .work .desc {
     opacity: 1;
-    background: transparent !important;
+    background: #ffffff65 !important;
   }
   .work .desc h3 {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-    color: #fff;
+    color: #05022e;
+    font-size: 3.2rem;
   }
   .work .desc span {
     -webkit-transform: translate3d(0, 0, 0);

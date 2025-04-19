@@ -16,8 +16,8 @@ sakhatan db haye morede nazar
 ????admin courses education projects skill testimonials ezafe shod
 
 __todo add test to db
-_todo sink html rendering
-_todo set social media
+__todo sink html rendering
+__todo set social media
 
 !!! fontawsome toye admin load nemshe 
 done some test entery to my database
@@ -28,20 +28,25 @@ eslahi bishtari roo html css shod
 be modelam ye function add kardam ke betoonam esme axaye add shodaro daram ***
 
 
-todo create html for more detail of project it can be like posts
-todo sink html rendering
+__todo create html for more detail of project it can be like posts
+__todo sink html rendering
 __todo set social media
 
 
 contact ba ye data base jadid motasel kardam ke save kone messagaro
 background taghir dade shod rangesh
 index va contact kamele hodoodan
-todo spam nashe to message
-todo ip visitoramo bebinam
+__todo spam nashe to message
+
 
 url project detail sakhte shod mitune khoshgeltar bashe
 ba click roo project mirim to detail
-todo mishe be modelam meghdare skill be kar rafte ezafe she
-todo selecter baraye projects gozashe she
-todo github va love ezafe she to detail
+__todo selecter baraye projects gozashe she
+__todo github va love ezafe she to detail
 
+to ye deyghe bishtar az 3 message ban mishe baraye 1 deyghe
+validator gozashtam form contact
+contact formam az rooye jadide forms render mishe majboor shodam classasho oonja bezaram
+alerte succes gozashtam barash
+todo ip visitoramo bebinam
+todo mishe be modelam meghdare skill be kar rafte ezafe she

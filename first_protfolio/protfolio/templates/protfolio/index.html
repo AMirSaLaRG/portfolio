@@ -9,44 +9,16 @@
 				   			<div class="row">
 					   			<div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
 					   				<div class="slider-text-inner">
-					   					<h1>Intuitive <strong></strong> is How Give We the User New Superpowers</h1>
-					   					<h2>Free html5 templates Made by <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>
-											<p><a class="btn btn-primary btn-demo popup-vimeo" href="https://vimeo.com/channels/staffpicks/93951774"> <i class="icon-monitor"></i> Live Preview</a> <a class="btn btn-primary btn-learn">Learn More<i class="icon-arrow-right3"></i></a></p>
+					   					<h1> <strong>Amirsalar Ghaffari</strong> </br> Programming and  Web develop</h1>
+											<p><a class="btn btn-primary btn-demo popup-vimeo" href="{%url 'about'%}"> <i class="icon-monitor"></i> About me</a>
+												 <a class="btn btn-primary btn-learn" href="{%url 'contact'%}">Contact me<i class="icon-arrow-right3"></i></a>
+												</p>
 					   				</div>
 					   			</div>
 					   		</div>
 				   		</div>
 				   	</li>
-				   	<li style="background-image: url({% static 'protfolio/images/img_bg_2.jpg ' %});">
-				   		<div class="overlay"></div>
-				   		<div class="container-fluid">
-				   			<div class="row">
-					   			<div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
-					   				<div class="slider-text-inner">
-					   					<h1>We are Happy to Create Newest Modern Websites</h1>
-											<h2>Free html5 templates Made by <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>
-											<p><a class="btn btn-primary btn-demo popup-vimeo" href="https://vimeo.com/channels/staffpicks/93951774"> <i class="icon-monitor"></i> Live Preview</a> <a class="btn btn-primary btn-learn">Learn More<i class="icon-arrow-right3"></i></a></p>
-					   				</div>
-					   			</div>
-					   		</div>
-				   		</div>
-				   	</li>
-				   	<li style="background-image: url({% static 'protfolio/images/img_bg_3.jpg ' %});">
-				   		<div class="overlay"></div>
-				   		<div class="container-fluid">
-				   			<div class="row">
-					   			<div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
-					   				<div class="slider-text-inner">
-					   					<h1>Download our Free HTML5 Bootstrap Template</h1>
-											<h2>Free html5 templates Made by <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>
-											<p><a class="btn btn-primary btn-demo popup-vimeo" href="https://vimeo.com/channels/staffpicks/93951774"> <i class="icon-monitor"></i> Live Preview</a> <a class="btn btn-primary btn-learn">Learn More<i class="icon-arrow-right3"></i></a></p>
-					   				</div>
-					   			</div>
-					   		</div>
-				   		</div>
-				   	</li>
-				  	</ul>
-			  	</div>
+				 
 			</aside>
 	
 			
@@ -56,7 +28,7 @@
 					{% comment %} skills show {% endcomment %}
 				{% for skill in skills %}
 				
-					<div class="col-md-6" style="margin-bottom: 100px;">										
+					<div id='skill' class="col-md-6" >										
 						<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
 							<div class="fh5co-icon">
 								<i class="{{skill.icon}}"></i>
@@ -148,8 +120,8 @@
 					</div>
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<p class="fh5co-lead">Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-							<p><a href="#" class="btn btn-primary">Learn More</a></p>
+							<p class="fh5co-lead">Interested in collaborating or have a project in mind?<br/> Let’s connect! Whether it’s Python automation, web development,</p>
+							<p><a href="{%url 'contact'%}" class="btn btn-primary">Contact Me</a></p>
 						</div>
 						
 					</div>

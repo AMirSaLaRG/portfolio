@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse
-from .models import Project, Skill, Course, ProjectSkill
+from .models import Project, Skill, Course, ProjectSkill, ContactMessage
 # Create your views here.
 
 def index(request):
@@ -15,6 +15,18 @@ def projects(request):
     return render(request, 'protfolio/projects.html')
 
 def contact(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+        phone = request.POST.get('phone')
+        contact_message = ContactMessage(name=name, email=email,phone=phone, message=message)
+        contact_message.save()
+        return HttpResponse("Thank you for your message!")
+    else:
+        pass
+    # Handle GET request here if needed
+   
     return render(request, 'protfolio/contact.html')
 
 def about(request):

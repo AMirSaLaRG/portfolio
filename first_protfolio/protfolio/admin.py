@@ -1,7 +1,7 @@
 # protfolio/admin.py
 from django.contrib import admin
 from django.utils.html import mark_safe
-from .models import Skill, Project, Course, Education, Testimonial, ProjectSkill, CourseSkill
+from .models import Skill, Project, Course, Education, Testimonial, ProjectSkill, CourseSkill, ContactMessage
 
 # ======================
 # SKILL ADMIN
@@ -98,3 +98,17 @@ class TestimonialAdmin(admin.ModelAdmin):
             return mark_safe(f'<img src="{obj.avatar.url}" width="50" />')
         return "-"
     avatar_preview.short_description = "Avatar Preview"
+
+# ======================
+# CONTACT MESSAGE ADMIN
+# ======================
+@admin.register(ContactMessage)
+class ContactMessageAdmin(admin.ModelAdmin):
+    list_display = ('name', 'email', 'phone', 'message_preview', 'created_at')
+    list_filter = ('created_at',)
+    search_fields = ('name', 'email', 'message')
+    readonly_fields = ('message_preview',)
+    
+    def message_preview(self, obj):
+        return mark_safe(f'<p>{obj.message[:50]}...</p>') if obj.message else "-"
+    message_preview.short_description = "Message Preview"

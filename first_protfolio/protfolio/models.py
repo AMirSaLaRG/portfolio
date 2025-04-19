@@ -158,3 +158,13 @@ class Testimonial(models.Model):
 
     class Meta:
         ordering = ['-date_received']
+
+class ContactMessage(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    message = models.TextField(max_length=1000)
+    phone = models.CharField(max_length=15, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Message from {self.name}"

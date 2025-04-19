@@ -58,7 +58,7 @@ body {
   font-size: 14px;
   line-height: 1.6;
   color: rgba(0, 0, 0, 0.5);
-  background: whitesmoke;
+  background: rgb(189, 238, 255);
 }
 @media screen and (max-width: 992px) {
   body {
@@ -149,6 +149,7 @@ figure figcaption {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  background: #ffffff9d;
 }
 @media screen and (max-width: 1200px) {
   #fh5co-aside {
@@ -365,7 +366,7 @@ figure figcaption {
 #fh5co-hero .flexslider .slides li {
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom center;
+  background-position: center center;
   min-height: 500px;
   position: relative;
 }
@@ -526,9 +527,15 @@ body.offcanvas .fh5co-nav-toggle {
 .blog-entry {
   width: 100%;
   float: left;
-  background: #fff;
+  background: #12b7c9;
+}
+#skill {
+  margin-bottom: 25px;
 }
 @media screen and (max-width: 768px) {
+  #skill {
+    margin-bottom: 120px;
+  }
   .blog-entry {
     margin-bottom: 30px;
   }
@@ -829,7 +836,7 @@ body.offcanvas .fh5co-nav-toggle {
 }
 
 .fh5co-more-contact {
-  background: #fafafa;
+  background: #afdfc973;
 }
 
 .fh5co-feature {

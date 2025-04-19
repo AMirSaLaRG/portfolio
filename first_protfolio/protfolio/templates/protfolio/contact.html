@@ -11,7 +11,7 @@
 									<i class="icon-globe"></i>
 								</div>
 								<div class="fh5co-text">
-									<p><a href="#">info@domain.com</a></p>
+									<p><a href="email://">amirsalarghaffari71@gmail.com</a></p>
 								</div>
 							</div>
 						</div>
@@ -21,7 +21,7 @@
 									<i class="icon-map"></i>
 								</div>
 								<div class="fh5co-text">
-									<p>198 West 21th Street, Suite 721 New York NY 10016</p>
+									<p>Parand Faze 2 </p>
 								</div>
 							</div>
 						</div>
@@ -31,7 +31,7 @@
 									<i class="icon-phone"></i>
 								</div>
 								<div class="fh5co-text">
-									<p><a href="tel://">+123 456 7890</a></p>
+									<p><a href="tel://">+98 912 3990 306</a></p>
 								</div>
 							</div>
 						</div>
@@ -45,24 +45,25 @@
 						<h2>Get In Touch</h2>
 					</div>
 				</div>
-				<form action="">
+				<form action="#" method="post" >
+					{% csrf_token %}
 					<div class="row">
 						<div class="col-md-12">
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Name">
+										<input type="text" class="form-control" placeholder="Name" name="name">
 									</div>
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Email">
+										<input type="text" class="form-control" placeholder="Email" name="email">
 									</div>
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Phone">
+										<input type="text" class="form-control" placeholder="Phone" name="phone">
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<textarea name="" id="message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+										<textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
 									</div>
 									<div class="form-group">
 										<input type="submit" class="btn btn-primary btn-md" value="Send Message">
@@ -75,7 +76,7 @@
 					</div>
 				</form>
 			</div>
-			<div id="map"></div>	
+				
 		</div>
 	</div>
 

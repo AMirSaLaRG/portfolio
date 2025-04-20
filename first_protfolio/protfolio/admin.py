@@ -104,7 +104,7 @@ class TestimonialAdmin(admin.ModelAdmin):
 # ======================
 @admin.register(ContactMessage)
 class ContactMessageAdmin(admin.ModelAdmin):
-    list_display = ('name', 'email', 'phone', 'message_preview', 'created_at')
+    list_display = ('name', 'email', 'phone', 'message_preview', 'created_at', 'user_ip')
     list_filter = ('created_at',)
     search_fields = ('name', 'email', 'message')
     readonly_fields = ('message_preview',)

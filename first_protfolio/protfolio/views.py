@@ -36,8 +36,7 @@ def project_detail(request, project_id):
 
     context = {
         'project': project,
-        'skills': Skill.objects.all(),
-        'projectskills': ProjectSkill.objects.filter(project=project).order_by('-project_id')
+        'project_skills': ProjectSkill.objects.filter(project=project).select_related('skill'),
     }
     return render(request, 'protfolio/project_detail.html', context)
 
@@ -68,7 +67,8 @@ def contact(request):
         email = request.POST.get('email')
         message = request.POST.get('message')
         phone = request.POST.get('phone')
-        contact_message = ContactMessage(name=name, email=email,phone=phone, message=message)
+        user_ip = request.META.get('REMOTE_ADDR')
+        contact_message = ContactMessage(name=name, email=email,phone=phone, message=message, user_ip=user_ip)
         contact_message.save()
         messages.success(request, "Your message has been sent successfully!")
         return redirect('contact')

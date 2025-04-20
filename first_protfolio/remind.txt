@@ -48,5 +48,10 @@ to ye deyghe bishtar az 3 message ban mishe baraye 1 deyghe
 validator gozashtam form contact
 contact formam az rooye jadide forms render mishe majboor shodam classasho oonja bezaram
 alerte succes gozashtam barash
+
+__todo mishe be modelam meghdare skill be kar rafte ezafe she
+__todo be message ke miad ip ham bede
+
 todo ip visitoramo bebinam
-todo mishe be modelam meghdare skill be kar rafte ezafe she
+detail_project neshun mide che estefadei az skill shode va cheqad mohem boode
+ip kasi ke message mifereste save mishe 

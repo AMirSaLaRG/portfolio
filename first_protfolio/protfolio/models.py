@@ -165,6 +165,7 @@ class ContactMessage(models.Model):
     message = models.TextField(max_length=1000)
     phone = models.CharField(max_length=15, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
+    user_ip = models.GenericIPAddressField(blank=True, null=True)
 
     def __str__(self):
         return f"Message from {self.name}"

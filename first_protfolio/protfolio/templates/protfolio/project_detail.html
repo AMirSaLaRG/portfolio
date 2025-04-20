@@ -5,7 +5,7 @@
 			<div class="fh5co-narrow-content">
 				<div class="row row-bottom-padded-md">
 					<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-						<img class="img-responsive" src="{%static '/protfolio/images/projects/'%}{{project.image_basename}}" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
+						<img class="img-responsive " src="{%static '/protfolio/images/projects/'%}{{project.image_basename}}" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
 					</div>
 					<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
 						<h2 class="fh5co-heading">{{project.title}}</h2>
@@ -28,20 +28,18 @@
 					<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Skills Used</h2>
 					
 					<div class="row">
-						{%for skill in project.skills_used.all%}
+						{% for project_skill in project_skills %}
 						<div class="col-md-6">
 							<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
-								
-								{% comment %} <div class="fh5co-icon">
-									
-								</div> {% endcomment %}
+								<div class="fh5co-icon">
+									<i class="{{project_skill.skill.icon}}"></i>
+								</div>
 								<div class="fh5co-text">
-									
-									{% comment %} <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p> {% endcomment %}
+									<h3>{{project_skill.skill.name}}</h3>
+									<p><strong>Importance:</strong> {{project_skill.get_importance_display}}</p>
+									<p><strong>Used:</strong> {{project_skill.usage_description}}</p>
 								</div>
-								<i class="{{skill.icon}}" style="font-size: 48px;"></i>
-									<h3>{{skill.name}}</h3>
-								</div>
+							</div>
 						</div>
 						
 						{% endfor %}

@@ -20,8 +20,8 @@ class ContactForm(forms.ModelForm):
             raise ValidationError("Email must be from the domain 'example.com'")
         return email
 
-    def clean(self):
-        cleaned_data = super().clean()
-        message = cleaned_data.get("message")
-        if len(message) < 10:
-            raise ValidationError("Message must be at least 10 characters long.")
+    def clean_message(self):
+        message = self.cleaned_data.get('message', '')
+        if len(message) < 10:  # Now safe for None/empty strings
+            raise forms.ValidationError("Message too short (min 10 chars)")
+        return message

@@ -70,7 +70,7 @@ class Project(models.Model):
         ('personal', 'Personal Project'),
         ('client', 'Client Work'), 
         ('open-source', 'Open Source')
-    ])
+    ], default='personal')
     
     def image_basename(self):
         if self.image:
@@ -84,6 +84,9 @@ class Project(models.Model):
 
     class Meta:
         ordering = ['-start_date']
+    
+    def __str__(self):
+        return self.title
 
 class ProjectSkill(models.Model):
     project = models.ForeignKey('Project', on_delete=models.CASCADE)
@@ -163,7 +166,7 @@ class ContactMessage(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField()
     message = models.TextField(max_length=1000)
-    phone = models.CharField(max_length=15, blank=True)
+    phone = models.CharField(max_length=15, blank=True, default="")  # Add null=True
     created_at = models.DateTimeField(auto_now_add=True)
     user_ip = models.GenericIPAddressField(blank=True, null=True)
 

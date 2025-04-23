@@ -1,17 +1,20 @@
 {% load static %}
+{% load i18n %}
+
 
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js">
+
+  <html lang="{{ LANGUAGE_CODE }}" class="no-js" {% if LANGUAGE_CODE == 'fa' %}dir="rtl"{% endif %}>
   <!--<![endif]-->
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>
-      Marble &mdash; Free HTML5 Bootstrap Website Template by FreeHTML5.co
+      AmirG - Portfolio 
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
@@ -51,7 +54,9 @@
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="shortcut icon" href="favicon.ico" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Noto+Sans+Arabic:wght@100..900&display=swap" rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700"
       rel="stylesheet"
@@ -82,13 +87,15 @@
 		<aside id="fh5co-aside" role="complementary" class="border js-fullheight">
 
 			<h1 id="fh5co-logo"><a href="index.html">Portfolio</a></h1>
+
+      
 			<nav id="fh5co-main-menu" role="navigation">
 				<ul>
-					<li><a href="{%url 'home'%}">Home</a></li>
+					<li><a href="{%url 'home'%}">{%trans "Home"%}</a></li>
 					{% comment %} <li><a href="{%url 'blog'%}">Blog</a></li> {% endcomment %}
-					<li><a href="{%url 'projects'%}">projects</a></li>
-					<li><a href="{%url 'about'%}">About Me</a></li>
-					<li><a href="{%url 'contact'%}">Contact</a></li>
+					<li><a href="{%url 'projects'%}">{%trans "projects"%}</a></li>
+					<li><a href="{%url 'about'%}">{%trans "About Me"%}</a></li>
+					<li><a href="{%url 'contact'%}">{%trans "Contact"%}</a></li>
 				</ul>
 			</nav>
 

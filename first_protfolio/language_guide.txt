@@ -1,0 +1,37 @@
+
+1. Setup (settings.py)
+python
+LANGUAGE_CODE = 'en-us'
+LANGUAGES = [('en', 'English'), ('fa', 'Persian')]
+LOCALE_PATHS = [BASE_DIR / 'locale']  # Path for .po files
+MIDDLEWARE = [..., 'django.middleware.locale.LocaleMiddleware', ...]
+2. Create Translation Files
+bash
+# Terminal (run in project root)
+mkdir locale
+django-admin makemessages -l fa
+Edit locale/fa/LC_MESSAGES/django.po:
+
+po
+msgid "Home"
+msgstr "خانه"
+# Add other translations...
+Compile:
+
+bash
+django-admin compilemessages
+3. Update HTML (head.html)
+html
+<html lang="{{ LANGUAGE_CODE }}" {% if LANGUAGE_CODE == 'fa' %}dir="rtl"{% endif %}>
+<!-- Use {% trans %} tags -->
+<a href="{% url 'home' %}">{% trans "Home" %}</a>
+4. URLs (urls.py)
+python
+from django.conf.urls.i18n import i18n_patterns
+urlpatterns = i18n_patterns(path('', include('app.urls')), prefix_default_language=False)
+5. Test
+/en/ → English
+
+/fa/ → Persian (RTL)
+
+Done! 🚀

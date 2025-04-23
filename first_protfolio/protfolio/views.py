@@ -5,6 +5,8 @@ from django.http import HttpResponseForbidden
 from .forms import ContactForm
 from django.contrib import messages
 import time
+from django.utils import translation
+translation.activate('fa')  # Force Persian for testing
 
 
 # Create your views here.

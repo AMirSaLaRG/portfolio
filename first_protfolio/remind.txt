@@ -57,3 +57,4 @@ detail_project neshun mide che estefadei az skill shode va cheqad mohem boode
 ip kasi ke message mifereste save mishe 
 todo fek konam kamele faqat axe khodamo bezaram
 todo deploy kardane site
+todo farsi kardan  django-admin makemessages -l fa  # 'fa' is the language code for Persian

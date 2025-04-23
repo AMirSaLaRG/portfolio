@@ -5,6 +5,7 @@ LANGUAGE_CODE = 'en-us'
 LANGUAGES = [('en', 'English'), ('fa', 'Persian')]
 LOCALE_PATHS = [BASE_DIR / 'locale']  # Path for .po files
 MIDDLEWARE = [..., 'django.middleware.locale.LocaleMiddleware', ...]
+(option)
 2. Create Translation Files
 bash
 # Terminal (run in project root)

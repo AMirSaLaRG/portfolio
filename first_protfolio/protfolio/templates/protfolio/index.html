@@ -1,4 +1,5 @@
  {% load static %}
+ {% load i18n %}
  {% include 'protfolio/includes/head.html'%}
  			<aside id="fh5co-hero" class="js-fullheight">
 				<div class="flexslider js-fullheight">
@@ -9,9 +10,9 @@
 				   			<div class="row">
 					   			<div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
 					   				<div class="slider-text-inner">
-					   					<h1> <strong>Amirsalar Ghaffari</strong> </br> Programming and Web development</h1>
-											<p><a class="btn btn-primary btn-demo popup-vimeo" href="{%url 'about'%}"> <i class="icon-monitor"></i> About me</a>
-												 <a class="btn btn-primary btn-learn" href="{%url 'contact'%}">Contact me<i class="icon-arrow-right3"></i></a>
+					   					<h1> <strong>{%translate "Amirsalar Ghaffari"%}</strong> </br> {%translate "Programming and Web development"%}</h1>
+											<p><a class="btn btn-primary btn-demo popup-vimeo" href="{%url 'about'%}"> <i class="icon-monitor"></i> {%translate "About me"%}</a>
+												 <a class="btn btn-primary btn-learn" href="{%url 'contact'%}">{%translate "Contact me"%}<i class="icon-arrow-right3"></i></a>
 												</p>
 					   				</div>
 					   			</div>
@@ -23,7 +24,7 @@
 	
 			
 			<div class="fh5co-narrow-content">
-				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Skills</h2>
+				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">{%translate "Skills"%}</h2>
 				<div class="row">
 					{% comment %} skills show {% endcomment %}
 				{% for skill in skills %}
@@ -52,7 +53,7 @@
 			</div>
 			{% comment %} this should be projects {% endcomment %}
 			<div class="fh5co-narrow-content" >
-				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Projects</h2>
+				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">{%translate "Projects"%}</h2>
 				<div class="row row-bottom-padded-md">
 					{% comment %} a card {% endcomment %}
 					{% for project in projects%}
@@ -71,13 +72,13 @@
 								{%endfor%}</span>
 								<p>{{project.description}}</p>
 								{%if project.github_url%}
-								<a href="{{project.github_url}}" class="lead"><i class="fa-brands fa-github"></i>   Git Page</a>
+								<a href="{{project.github_url}}" class="lead"><i class="fa-brands fa-github"></i>   Git {%translate "Page"%}</a>
 								{%endif%}
 								</br>
 								{%if project.live_url%}
-								<a href="{{project.live_url}}" class="lead"><i class="fa-solid fa-globe"></i>   Online Page</a>
+								<a href="{{project.live_url}}" class="lead"><i class="fa-solid fa-globe"></i>   Online {%translate "Page"%}</a>
 								{%endif%}
-								</br><a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>
+								</br><a href="#" class="lead">{%translate "Read More"%} <i class="icon-arrow-right3"></i></a>
 							</div>
 						</div>
 					</div>
@@ -115,13 +116,13 @@
 				<div class="fh5co-narrow-content">
 					<div class="row">
 						<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-							<h1 class="fh5co-heading-colored">Get in touch</h1>
+							<h1 class="fh5co-heading-colored">{%translate "Get in touch"%}</h1>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<p class="fh5co-lead">Interested in collaborating or have a project in mind?<br/> Let’s connect! Whether it’s Python automation, web development,</p>
-							<p><a href="{%url 'contact'%}" class="btn btn-primary">Contact Me</a></p>
+							<p class="fh5co-lead">{%translate "Interested in collaborating or have a project in mind?"%}<br/> {%translate "Let’s connect! Whether it’s Python automation, web development,"%}</p>
+							<p><a href="{%url 'contact'%}" class="btn btn-primary">{%translate "Contact Me"%}</a></p>
 						</div>
 						
 					</div>

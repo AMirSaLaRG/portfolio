@@ -58,3 +58,6 @@ ip kasi ke message mifereste save mishe
 todo fek konam kamele faqat axe khodamo bezaram
 todo deploy kardane site
 todo farsi kardan  django-admin makemessages -l fa  # 'fa' is the language code for Persian
+page aksare bakhshash baraye farsi okay shod
+todo rtl floata va stylaye rast be chap moratab tar beshe
+todo proje ha bayad farsi dashte bashe ya ye table jadid ya be hamoon table ezafe she

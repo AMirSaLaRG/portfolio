@@ -1,92 +1,92 @@
- {% load static %}
- {% include 'protfolio/includes/head.html'%}
+{% load static %}
+{% load i18n %}
+{% include 'protfolio/includes/head.html'%}
 
-		{% comment %} <div id="fh5co-main"> {% endcomment %}
-			<div class="fh5co-narrow-content">
-				<div class="row row-bottom-padded-md">
-					<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-						<img class="img-responsive" style="margin-bottom: 20px" src="{%static '/protfolio/images/img_bg_1.jpg'%}" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-					</div>
-					<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-						<h2 class="fh5co-heading">About Me</h2>
-						<div class="about-me">
-						<p>
-							Hi! I'm a former <strong>Mechanical Engineer</strong> with 3 years of experience in industrial and power plant projects. 
-							During my time in the field, I worked as a <strong>Technical Officer</strong>, interpreting engineering drawings, 
-							managing on-site workers, and ensuring project execution aligned with specifications. 
-							This role honed my problem-solving skills and attention to detail—qualities I now apply to programming.
-						</p>
+<div class="fh5co-narrow-content">
+    <div class="row row-bottom-padded-md">
+        <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+            <img class="img-responsive" style="margin-bottom: 20px" src="{% static '/protfolio/images/img_bg_1.jpg' %}" alt="'Portfolio Image'">
+        </div>
+        <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+            <h2 class="fh5co-heading">{% translate "About Me" %}</h2>
+            <div class="about-me">
+                <p>
+                    {% blocktranslate %}
+                    Hi! I'm a former <strong>Mechanical Engineer</strong> with 3 years of experience in industrial and power plant projects. 
+                    During my time in the field, I worked as a <strong>Technical Officer</strong>, interpreting engineering drawings, 
+                    managing on-site workers, and ensuring project execution aligned with specifications. 
+                    This role honed my problem-solving skills and attention to detail—qualities I now apply to programming.
+                    {% endblocktranslate %}
+                </p>
 
-						<p>
-							In 2023, I decided to pivot my career toward <strong>software development</strong>, focusing on 
-							<strong>Python, web development (HTML/CSS/JavaScript), and data science</strong>, with a long-term goal of 
-							transitioning into <strong>AI/ML</strong>. Over the past year, I’ve immersed myself in learning through 
-							project-based courses (Udemy, YouTube) and official documentation (like Django’s). 
-							I’m now building a portfolio of projects to showcase my skills and actively seeking 
-							<strong>freelance or entry-level roles</strong> in programming or web development.
-						</p>
+                <p>
+                    {% blocktranslate %}
+                    In 2023, I decided to pivot my career toward <strong>software development</strong>, focusing on 
+                    <strong>Python, web development (HTML/CSS/JavaScript), and data science</strong>, with a long-term goal of 
+                    transitioning into <strong>AI/ML</strong>. Over the past year, I've immersed myself in learning through 
+                    project-based courses (Udemy, YouTube) and official documentation (like Django's). 
+                    I'm now building a portfolio of projects to showcase my skills and actively seeking 
+                    <strong>freelance or entry-level roles</strong> in programming or web development.
+                    {% endblocktranslate %}
+                </p>
 
-						<p>
-							What drives me? A genuine passion for coding—I love turning ideas into functional solutions—and 
-							the rapid growth potential of this field. Born in <strong>April 1992</strong>, I bring a mature, disciplined mindset 
-							from my engineering background, combined with the agility to adapt to new technologies.
-						</p>
+                <p>
+                    {% blocktranslate %}
+                    What drives me? A genuine passion for coding—I love turning ideas into functional solutions—and 
+                    the rapid growth potential of this field. Born in <strong>April 1992</strong>, I bring a mature, disciplined mindset 
+                    from my engineering background, combined with the agility to adapt to new technologies.
+                    {% endblocktranslate %}
+                </p>
 
-						<p>
-							Let’s connect if you’re looking for a <strong>dedicated junior developer</strong> or have advice for my journey! 
-						</p>
-</div></div>
-				</div>
-			</div>
+                <p>
+                    {% translate "Let's connect if you're looking for a <strong>dedicated junior developer</strong> or have advice for my journey!" %}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 
-			<div class="fh5co-narrow-content">
-					<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Skills</h2>
-					<div class="row">
-						{% for skill in skills %}
-				
-					<div id='skill' class="col-md-6" >										
-						<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
-							<div class="fh5co-icon">
-								<i class="{{skill.icon}}"></i>
-							</div>
-							<div class="fh5co-text">
-								<h3>{{skill.name}}</h3>
- 								<div class="skill-bar">
- 								   <div class="skill-level" style="width: {{ skill.proficiency }}%">
- 								     <span>{{ skill.proficiency }}%</span>
- 								   </div>
- 								 </div>							</div>
-						</div>
-					</div>
-				{%endfor%}
-						
-					</div>
-				</div>
-		
-			<div class="fh5co-narrow-content">
-				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Courses</h2>
-				<div class="row row-bottom-padded-md">
+<div class="fh5co-narrow-content">
+    <h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">{% translate "Skills" %}</h2>
+    <div class="row">
+        {% for skill in skills %}
+        <div id='skill' class="col-md-6">                                        
+            <div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+                <div class="fh5co-icon">
+                    <i class="{{skill.icon}}"></i>
+                </div>
+                <div class="fh5co-text">
+                    <h3>{{ skill.name }}</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: {{ skill.proficiency }}%">
+                            <span>{{ skill.proficiency }}%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 
-					{% for course in courses%}
-					<div class="col-md-3 col-sm-6 col-padding text-center animate-box">
-						<a href="{%url 'projects'%}{{project.id}}" class="work image-popup" style="background -image: url({% static 'protfolio/images/projects/'%}{{project.image_basename}});">
-							<div class="desc" style='opacity: 0.8; background-image: url{% static "portfolio/images/img-3.jpg" %}'>
-								<h3>{{course.title}}</h3>
-								<span>
-									{%for skill in course.skills_covered.all%} 
-									<i class="{{skill.icon}}"></i><small>{{skill.name}}</small> /   </small>
-									{%endfor%}
-								</span>
-							</div>
-						</a>
-					</div>
-					{% endfor %}
-					
-				</div>
-			</div>
-		</div>
-	</div>
+<div class="fh5co-narrow-content">
+    <h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">{% translate "Courses" %}</h2>
+    <div class="row row-bottom-padded-md">
+        {% for course in courses %}
+        <div class="col-md-3 col-sm-6 col-padding text-center animate-box">
+            <a href="{% url 'projects' %}{{ project.id }}" class="work image-popup" style="background-image: url({% static 'protfolio/images/projects/' %}{{ project.image_basename }});">
+                <div class="desc" style='opacity: 0.8; background-image: url({% static "portfolio/images/img-3.jpg" %})'>
+                    <h3>{{ course.title }}</h3>
+                    <span>
+                        {% for skill in course.skills_covered.all %} 
+                        <i class="{{ skill.icon }}"></i><small>{{ skill.name }}</small> / </small>
+                        {% endfor %}
+                    </span>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 
-
-{% include 'protfolio/includes/footer.html'%}
-
+{% include 'protfolio/includes/footer.html' %}

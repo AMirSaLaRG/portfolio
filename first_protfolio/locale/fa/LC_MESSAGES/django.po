@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-22 16:00+0330\n"
+"POT-Creation-Date: 2025-04-23 11:56+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,18 +17,169 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-#: .\protfolio\templates\protfolio\includes\head.html:90
+
+#: .\language_guide.txt:28
+#: .\protfolio\templates\protfolio\includes\head.html:94
 msgid "Home"
 msgstr "صفحه اصلی"
 
-#: .\protfolio\templates\protfolio\includes\head.html:93
-msgid "projects"
-msgstr "پروژه ها"
-
-#: .\protfolio\templates\protfolio\includes\head.html:94
+#: .\protfolio\templates\protfolio\about.html:11
+#: .\protfolio\templates\protfolio\includes\head.html:98
 msgid "About Me"
 msgstr "درباره من"
 
-#: .\protfolio\templates\protfolio\includes\head.html:95
+#: .\protfolio\templates\protfolio\about.html:14
+msgid ""
+"\n"
+"                    Hi! I'm a former <strong>Mechanical Engineer</strong> "
+"with 3 years of experience in industrial and power plant projects. \n"
+"                    During my time in the field, I worked as a "
+"<strong>Technical Officer</strong>, interpreting engineering drawings, \n"
+"                    managing on-site workers, and ensuring project execution "
+"aligned with specifications. \n"
+"                    This role honed my problem-solving skills and attention "
+"to detail—qualities I now apply to programming.\n"
+"                    "
+msgstr ""
+"\n"
+"                    سلام! من یک <strong>مهندس مکانیک</strong> سابق با 3 سال "
+"سابقه در پروژه‌های صنعتی و نیروگاهی هستم. \n"
+"                    در طول فعالیتم در این زمینه، به عنوان <strong>افسر فنی</"
+"strong> مشغول بودم که شامل تفسیر نقشه‌های مهندسی، \n"
+"                    مدیریت کارگران در محل اجرا و اطمینان از انطباق اجرای "
+"پروژه با مشخصات فنی می‌شد. \n"
+"                    این نقش مهارت‌های حل مسئله و توجه به جزئیات را در من "
+"تقویت کرد - ویژگی‌هایی که اکنون در برنامه‌نویسی به کار می‌برم.\n"
+"                    "
+
+#: .\protfolio\templates\protfolio\about.html:23
+msgid ""
+"\n"
+"                    In 2023, I decided to pivot my career toward "
+"<strong>software development</strong>, focusing on \n"
+"                    <strong>Python, web development (HTML/CSS/JavaScript), "
+"and data science</strong>, with a long-term goal of \n"
+"                    transitioning into <strong>AI/ML</strong>. Over the past "
+"year, I've immersed myself in learning through \n"
+"                    project-based courses (Udemy, YouTube) and official "
+"documentation (like Django's). \n"
+"                    I'm now building a portfolio of projects to showcase my "
+"skills and actively seeking \n"
+"                    <strong>freelance or entry-level roles</strong> in "
+"programming or web development.\n"
+"                    "
+msgstr ""
+"\n"
+"                    در سال 2023، تصمیم گرفتم مسیر شغلی خود را به سمت "
+"<strong>توسعه نرم‌افزار</strong> تغییر دهم، با تمرکز بر \n"
+"                    <strong>پایتون، توسعه وب (HTML/CSS/JavaScript) و علم "
+"داده</strong>، با هدف بلندمدت \n"
+"                    ورود به حوزه <strong>هوش مصنوعی/یادگیری ماشین</strong>. "
+"در طول سال گذشته، خود را غرق یادگیری از طریق \n"
+"                    دوره‌های پروژه‌محور (Udemy, YouTube) و مستندات رسمی (مانند "
+"مستندات جنگو) کرده‌ام. \n"
+"                    اکنون در حال ساخت مجموعه‌ای از پروژه‌ها برای نمایش "
+"مهارت‌هایم هستم و فعالانه به دنبال \n"
+"                    <strong>موقعیت‌های فریلنس یا سطح ابتدایی</strong> در "
+"برنامه‌نویسی یا توسعه وب می‌گردم.\n"
+"                    "
+
+#: .\protfolio\templates\protfolio\about.html:34
+msgid ""
+"\n"
+"                    What drives me? A genuine passion for coding—I love "
+"turning ideas into functional solutions—and \n"
+"                    the rapid growth potential of this field. Born in "
+"<strong>April 1992</strong>, I bring a mature, disciplined mindset \n"
+"                    from my engineering background, combined with the "
+"agility to adapt to new technologies.\n"
+"                    "
+msgstr ""
+"\n"
+"                    انگیزه من چیست؟ علاقه‌ای اصیل به کدنویسی - عاشق تبدیل "
+"ایده‌ها به راه‌حل‌های عملی هستم - و \n"
+"                    پتانسیل رشد سریع این حوزه. متولد <strong>آوریل 1992</"
+"strong>، با ذهنی بالغ و منظم \n"
+"                    از پیشینه مهندسی خود، همراه با انعطاف‌پذیری برای سازگاری "
+"با فناوری‌های جدید وارد این حوزه شده‌ام.\n"
+"                    "
+
+#: .\protfolio\templates\protfolio\about.html:42
+msgid ""
+"Let's connect if you're looking for a <strong>dedicated junior developer</"
+"strong> or have advice for my journey!"
+msgstr ""
+"بیایید در ارتباط باشیم اگر به دنبال یک <strong>توسعه‌دهنده جونیور متعهد</"
+"strong> هستید یا راهنمایی برای سفر من دارید!"
+
+#: .\protfolio\templates\protfolio\about.html:50
+#: .\protfolio\templates\protfolio\index.html:27
+msgid "Skills"
+msgstr "مهارت‌ها"
+
+#: .\protfolio\templates\protfolio\about.html:73
+msgid "Courses"
+msgstr "دوره ها "
+
+#: .\protfolio\templates\protfolio\contact.html:53
+#: .\protfolio\templates\protfolio\index.html:125
+#: .\protfolio\templates\protfolio\projects.html:29
+msgid "Get in touch"
+msgstr "در تماس باشیم"
+
+#: .\protfolio\templates\protfolio\contact.html:92
+msgid "Send Message"
+msgstr "ارسال پیام"
+
+#: .\protfolio\templates\protfolio\includes\head.html:97
+msgid "projects"
+msgstr "پروژه ها"
+
+#: .\protfolio\templates\protfolio\includes\head.html:99
 msgid "Contact"
 msgstr "تماس"
+
+#: .\protfolio\templates\protfolio\index.html:13
+msgid "Amirsalar Ghaffari"
+msgstr "امیرسالار غفاری"
+
+#: .\protfolio\templates\protfolio\index.html:13
+msgid "Programming and Web development"
+msgstr "برنامه نویسی و طراحی سایت"
+
+#: .\protfolio\templates\protfolio\index.html:14
+msgid "About me"
+msgstr "درباره من"
+
+#: .\protfolio\templates\protfolio\index.html:15
+msgid "Contact me"
+msgstr "تماس"
+
+#: .\protfolio\templates\protfolio\index.html:58
+#: .\protfolio\templates\protfolio\projects.html:8
+msgid "Projects"
+msgstr "پروژه ها"
+
+#: .\protfolio\templates\protfolio\index.html:79
+#: .\protfolio\templates\protfolio\index.html:83
+msgid "Page"
+msgstr "صفحه"
+
+#: .\protfolio\templates\protfolio\index.html:85
+msgid "Read More"
+msgstr "ادامه مطلب"
+
+#: .\protfolio\templates\protfolio\index.html:130
+#: .\protfolio\templates\protfolio\projects.html:34
+msgid "Interested in collaborating or have a project in mind?"
+msgstr "علاقه مند به همکاری یا انجام پروژه مشترک هستید؟"
+
+#: .\protfolio\templates\protfolio\index.html:130
+#: .\protfolio\templates\protfolio\projects.html:34
+msgid "Let’s connect! Whether it’s Python automation, web development,"
+msgstr "با هم در تماس باشیم در ارتباط با برنامه نویسی پابتون و یا طراحی سایتو"
+
+#: .\protfolio\templates\protfolio\index.html:131
+#: .\protfolio\templates\protfolio\projects.html:35
+msgid "Contact Me"
+msgstr " تماس با من"

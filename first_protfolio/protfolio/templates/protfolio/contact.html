@@ -1,4 +1,5 @@
  {% load static %}
+ {% load i18n%}
  {% include 'protfolio/includes/head.html'%}
 
 		{% comment %} <div id="fh5co-main"> {% endcomment %}
@@ -31,14 +32,14 @@
 									<i class="icon-phone"></i>
 								</div>
 								<div class="fh5co-text">
-									<p><a href="tel://">+98 912 3990 306</a></p>
+									<p style="direction: ltr"><a href="tel://">+98 912 3990 306</a></p>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="fh5co-narrow-content animate-box" data-animate-effect="fadeInLeft">
+			<div class="fh5co-narrow-content animate-box" data-animate-effect="fadeInLeft" style="direction: ltr">
 				{% if messages %}
 					{% for message in messages %}
 						<div class="alert alert-{{ message.tags }}">
@@ -48,7 +49,7 @@
 					{% endif %}
 				<div class="row">
 					<div class="col-md-4">
-						<h2>Get In Touch</h2>
+						<h2>{%translate "Get in touch"%}</h2>
 					</div>
 					
 				</div>
@@ -87,7 +88,7 @@
 											{% endif %}
 										</div>
 										<div class="form-group">
-											<input type="submit" class="btn btn-primary btn-md" value="Send Message">
+											<input type="submit" class="btn btn-primary btn-md" value="{% translate 'Send Message' %}">
 										</div>
 									</div>
 								</div>

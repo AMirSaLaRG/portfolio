@@ -2,6 +2,7 @@
 from django.contrib import admin
 from django.utils.html import mark_safe
 from .models import Skill, Project, Course, Education, Testimonial, ProjectSkill, CourseSkill, ContactMessage
+import os
 
 # ======================
 # SKILL ADMIN
@@ -40,7 +41,8 @@ class ProjectAdmin(admin.ModelAdmin):
     
     def image_preview(self, obj):
         if obj.image:
-            return mark_safe(f'<img src="{obj.image.url}" width="150" />')
+            filename = os.path.basename(obj.image.name)
+            return mark_safe(f'<img src="/static/protfolio/images/projects/{filename}" width="150" />')
         return "-"
     image_preview.short_description = "Preview"
 

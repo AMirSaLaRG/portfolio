@@ -45,6 +45,8 @@ class Project(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     description = models.TextField()
     detailed_description = models.TextField(blank=True)
+    description_fa = models.TextField(null=True)
+    detailed_description_fa = models.TextField(blank=True,null=True)
     image = ProcessedImageField(
         upload_to='protfolio/static/protfolio/images/projects',
         processors=[ResizeToFill(500, 400)],

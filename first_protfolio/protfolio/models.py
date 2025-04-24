@@ -45,6 +45,7 @@ class Project(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     description = models.TextField()
     detailed_description = models.TextField(blank=True)
+    title_fa = models.CharField(max_length=200, null=True)
     description_fa = models.TextField(null=True)
     detailed_description_fa = models.TextField(blank=True,null=True)
     image = ProcessedImageField(

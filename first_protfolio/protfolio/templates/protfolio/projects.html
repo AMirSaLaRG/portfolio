@@ -11,8 +11,8 @@
 					<div class="col-md-3 col-sm-6 col-padding text-center animate-box">
 						<a href="{%url 'projects'%}{{project.id}}" class="work image-popup" style="background-image: url({% static 'protfolio/images/projects/'%}{{project.image_basename}});">
 							<div class="desc">
-								<h3>{{project.title}}</h3>
-								<span>{{project.description}}</span>
+								<h3>{%if LANGUAGE_CODE == 'fa' and project.title_fa %}  {{project.title_fa}} {%else%} {{project.title}}{%endif%}</h3>
+								<span>{%if LANGUAGE_CODE == 'fa' and project.description_fa %}  {{project.description_fa}} {%else%} {{project.description}}{%endif%}</span>
 							</div>
 						</a>
 					</div>

@@ -631,6 +631,9 @@ body.offcanvas .fh5co-nav-toggle {
   -o-transition: 0.9s;
   transition: 0.9s;
 }
+.desc {
+  padding: 25px;
+}
 .blog-entry .desc {
   padding: 25px;
 }

@@ -8,9 +8,9 @@
 						<img class="img-responsive " src="{%static '/protfolio/images/projects/'%}{{project.image_basename}}" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
 					</div>
 					<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-						<h2 class="fh5co-heading">{{project.title}}</h2>
-						<p>{{project.description}}</p>
-						<p>{{project.detailed_description}}</p>
+						<h2 class="fh5co-heading">{%if LANGUAGE_CODE == 'fa' and project.title_fa %}  {{project.title_fa}} {%else%} {{project.title}}{%endif%}</h2>
+						<p>{%if LANGUAGE_CODE == 'fa' and project.description_fa %}  {{project.description_fa}} {%else%} {{project.description}}{%endif%}</p>
+						<p>{%if LANGUAGE_CODE == 'fa' and project.detailed_description_fa %}  {{project.detailed_description_fa}} {%else%} {{project.detailed_description}}{%endif%}</p>
 						<p>
 							{% if project.github_url %}
 							<a href="{{project.github_url}}" class="lead"><i class="fa-brands fa-github"></i>   Git Page</a>

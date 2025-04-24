@@ -66,11 +66,12 @@
 							<img src="{% static 'protfolio/images/img-1.jpg' %}" class="blog-img" alt="No image">
 							{% endif %}
 							<div class="desc">
-								<h3><a href="{%url 'projects'%}{{project.id}}">{{project.title}}</a></h3>
-								<span>{%for skill in project.skills_used.all%} 
+								<h3><a href="{%url 'projects'%}{{project.id}}">{%if LANGUAGE_CODE == 'fa' and project.title_fa %}  {{project.title_fa}} {%else%} {{project.title}}{%endif%}</a></h3>
+								<span style="direction: ltr">{%for skill in project.skills_used.all%} 
 								<i class="{{skill.icon}}"></i><small>{{skill.name}}</small> /   </small>
 								{%endfor%}</span>
-								<p>{{project.description}}</p>
+								{% comment %} <p>{{project.description}}</p> {% endcomment %}
+								<p>{%if LANGUAGE_CODE == 'fa' and project.description_fa %}  {{project.description_fa}} {%else%} {{project.description}}{%endif%}</p>
 								{%if project.github_url%}
 								<a href="{{project.github_url}}" class="lead"><i class="fa-brands fa-github"></i>   Git {%translate "Page"%}</a>
 								{%endif%}

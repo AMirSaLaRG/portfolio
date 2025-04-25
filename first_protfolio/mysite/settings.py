@@ -106,12 +106,16 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = 'en'
-
 LANGUAGES = [
     ('en', 'English'),
-    ('fa', 'Persian'),
+    ('fa', 'Persian'),  # Farsi
 ]
+
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale'),  # Path to translations
+]
+
+LANGUAGE_CODE = 'en'  # Default language
 
 TIME_ZONE = 'UTC'
 

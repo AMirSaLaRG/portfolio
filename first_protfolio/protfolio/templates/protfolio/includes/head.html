@@ -85,17 +85,31 @@
 	<div id="fh5co-page">
 		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
 		<aside id="fh5co-aside" role="complementary" class="border js-fullheight">
+      
 
 			<h1 id="fh5co-logo"><a href="{%url 'home'%}">Portfolio</a></h1>
+      
+
+
+
+
+      
 
       
 			<nav id="fh5co-main-menu" role="navigation">
 				<ul>
+          
 					<li><a href="{%url 'home'%}">{%trans "Home"%}</a></li>
 					{% comment %} <li><a href="{%url 'blog'%}">Blog</a></li> {% endcomment %}
 					<li><a href="{%url 'projects'%}">{%trans "projects"%}</a></li>
 					<li><a href="{%url 'about'%}">{%trans "About Me"%}</a></li>
 					<li><a href="{%url 'contact'%}">{%trans "Contact"%}</a></li>
+          <li><a> <form action="{% url 'set_language' %}" method="post", id="language-form">
+            {% csrf_token %}
+            <input name="next" type="hidden" value="{{ request.path }}">
+            {%if LANGUAGE_CODE != 'en'%}<button type="submit" name="language" value="en">En</button>{%endif%}
+            {%if LANGUAGE_CODE != 'fa'%}<button type="submit" name="language" value="fa">Fa</button>{%endif%}
+            </form></a></li>
 				</ul>
 			</nav>
 

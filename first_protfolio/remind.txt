@@ -55,9 +55,15 @@ __todo be message ke miad ip ham bede
 todo ip visitoramo bebinam
 detail_project neshun mide che estefadei az skill shode va cheqad mohem boode
 ip kasi ke message mifereste save mishe 
-todo fek konam kamele faqat axe khodamo bezaram
-todo deploy kardane site
-todo farsi kardan  django-admin makemessages -l fa  # 'fa' is the language code for Persian
+
+
+__todo farsi kardan  django-admin makemessages -l fa  # 'fa' is the language code for Persian
 page aksare bakhshash baraye farsi okay shod
-todo rtl floata va stylaye rast be chap moratab tar beshe
-todo proje ha bayad farsi dashte bashe ya ye table jadid ya be hamoon table ezafe she
+
+__todo proje ha bayad farsi dashte bashe ya ye table jadid ya be hamoon table ezafe she
+__todo rtl floata va stylaye rast be chap moratab tar beshe
+projeha farsi ezafe shod va ru site renderesh ok shod ke age farsi dashte bashe render she
+todo deploy kardane site
+todo fek konam kamele faqat axe khodamo bezaram
+todo ghabeliate filter gereftan to bakhshhye mokhtalef mesle proje va skill
+stylaye farsi va click jahate taghire zaban ezafe shod 

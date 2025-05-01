@@ -107,8 +107,8 @@
           <li><a> <form action="{% url 'set_language' %}" method="post", id="language-form">
             {% csrf_token %}
             <input name="next" type="hidden" value="{{ request.path }}">
-            {%if LANGUAGE_CODE != 'en'%}<button type="submit" name="language" value="en">En</button>{%endif%}
-            {%if LANGUAGE_CODE != 'fa'%}<button type="submit" name="language" value="fa">Fa</button>{%endif%}
+            {%if LANGUAGE_CODE != 'en'%}<button type="submit" name="language" value="en">English</button>{%endif%}
+            {%if LANGUAGE_CODE != 'fa'%}<button type="submit" name="language" value="fa">فارسی</button>{%endif%}
             </form></a></li>
 				</ul>
 			</nav>

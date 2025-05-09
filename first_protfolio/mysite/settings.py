@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-$cnwrsvxpbp1_pwax2dlk@xhit2+p&^tlc5mbt5ntogq#9-vi!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware', #whitenoise
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',  # Add this line for language support
@@ -132,6 +133,10 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / "protfolio/static",  # Points to the static folder
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+if os.getenv('RAILWAY_STATIC_URL'):
+    STATIC_URL = os.getenv('RAILWAY_STATIC_URL')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

@@ -146,3 +146,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale'),  # Add this line
 ]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://portfolio-production-8344.up.railway.app',  # Add your domain here
+]

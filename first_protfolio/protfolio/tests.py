@@ -1,7 +1,7 @@
 from django.test import TestCase, Client
-from portfolio.models import Skill, Project, ContactMessage
+from protfolio.models import Skill, Project, ContactMessage
 from django.urls import reverse
-from portfolio.forms import ContactForm  # Assuming you have this
+from protfolio.forms import ContactForm  # Assuming you have this
 # Create your tests here.
 
 

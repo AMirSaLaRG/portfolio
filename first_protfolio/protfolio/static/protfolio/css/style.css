@@ -1444,3 +1444,64 @@ html[lang="fa"] body.offcanvas #fh5co-aside {
 #fh5co-hero .col-md-8 {
   float: left;
 }
+
+/* button */
+#screweffect {
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+#screweffect:before {
+  content: "";
+  background-color: rgb(184, 23, 136);
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  top: -8%;
+  left: 0;
+  z-index: -1;
+  transform: skewX(30deg);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+#screweffect:hover:before {
+  left: 50%;
+  transform: skewX(0deg);
+  top: 0;
+}
+#screweffect:after {
+  content: "";
+  background-color: skyblue;
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  top: 8%;
+  left: 53%;
+  z-index: -1;
+  transform: skewX(30deg);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+#screweffect:hover:after {
+  left: 0;
+  transform: skewX(0deg);
+  top: 0;
+}
+
+.header-animated {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+
+  font-family: sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  background-color: rgba(245, 245, 245, 0.902);
+
+  #screweffect {
+    align-self: flex-start;
+    z-index: 2;
+  }
+
+  * {
+    margin-top: 10px;
+  }
+}

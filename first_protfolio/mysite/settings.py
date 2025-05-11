@@ -149,4 +149,6 @@ LOCALE_PATHS = [
 
 CSRF_TRUSTED_ORIGINS = [
     'https://portfolio-production-8344.up.railway.app',  # Add your domain here
+    'http://127.0.0.1:8000/',  # Add your local domain here
+    'http://localhost:8000',  # Add your local domain here
 ]

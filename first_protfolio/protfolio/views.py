@@ -91,3 +91,20 @@ def about(request):
 
 def blog(request):
     return render(request, 'protfolio/blog.html')
+
+# ______________________ animate project ______________________
+
+def animate_project(request):
+    return render(request, 'protfolio/projects/animateproject.html')
+
+def animate_buttons(request):
+    return render(request, 'protfolio/projects/animate-buttons.html')
+
+def animate_buttons_group(request):
+    return render(request, 'protfolio/projects/animate-buttons-group.html')
+
+def animate_img(request):
+    return render(request, 'protfolio/projects/animate-img.html')
+
+def animate_cards(request):
+    return render(request, 'protfolio/projects/animate-cards.html')
